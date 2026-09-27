@@ -700,6 +700,7 @@ window.TB_DATEN = { basis: [
       "hinweis_fp": ["Kennenlernen von Fachbegriffen und ihrer Bedeutung, z. B. Maßstab, Stadtplan", "Bezug zum Schulstandort und Wohnort der Kinder herstellen"] },
     { "id": "su-34-6", "stufe": "3/4", "titel": "Sicher mit dem Fahrrad unterwegs", "inhaltsfelder": ["Raum, Umwelt und Mobilität"], "schlagworte": ["Sicherheit & Risiko"], "kompetenzen_kurz": ["Verkehrsregeln sicher anwenden", "an der Radfahrausbildung teilnehmen und sich verkehrsgerecht verhalten"],
       "fundstelle": "Klasse 4 · Raum, Umwelt und Mobilität · Schulweg und Verkehrssicherheit, Verkehrsmittel",
+      "beschluss": ["Konferenzbeschluss vom 03.08.2023: Die Fahrradprüfung kann in Klasse 3 oder in Klasse 4 stattfinden."],
       "auszug": ["wenden Verkehrsregeln sicher an", "verhalten sich in Verkehrssituationen normgerecht", "kennen und nutzen die Möglichkeiten des ÖPNV, benennen und reflektieren dessen Aufgaben und Bedeutung", "beherrschen das Fahrrad motorisch sicher, nehmen an der Radfahrausbildung teil und verhalten sich verkehrsgerecht", "Lernangebote: Vergleich von Verkehrsaufkommen in Städten und ländlichen Gebieten · verschiedene Verkehrsmittel kennen · Fahrplan · verkehrssicheres Fahrrad · Vorbereitung auf die Fahrradprüfung"],
       "hinweis_fp": ["Zusammenarbeit mit der Polizei Köln", "Nutzung der schuleigenen Fahrräder", "Wege mit der KVB planen und durchführen"] },
     { "id": "su-34-7", "stufe": "3/4", "titel": "Konflikte lösen und mitbestimmen", "inhaltsfelder": ["Mensch und Gemeinschaft"], "schlagworte": ["Gemeinschaft", "Regeln"], "kompetenzen_kurz": ["sich in Bedürfnisse und Gefühle anderer hineinversetzen", "Strukturen wie Klassenrat und Abstimmungen nutzen"],
@@ -734,10 +735,12 @@ window.TB_DATEN = { basis: [
       "auszug": ["beschreiben, wie ihre eigenen Konsumwünsche durch Werbung beeinflusst werden", "bewerten ihre Konsumgewohnheiten unter ökologischen Kriterien (z. B. Abfallvermeidung, Energieverbrauch)", "Lernangebote: Werbung · Manipulationsstrategien · Konsum · Energie · Upcycling"] },
     { "id": "su-34-15", "stufe": "3/4", "titel": "Vom Säugling zum Erwachsenen – Körper und Rollen", "inhaltsfelder": ["Mensch und Gemeinschaft"], "schlagworte": ["Körper", "Gemeinschaft"], "kompetenzen_kurz": ["die Entwicklung vom Säugling zum Erwachsenen darstellen", "typische Rollenerwartungen beschreiben und Beispiele für verändertes Rollenverständnis entdecken"],
       "fundstelle": "Klasse 4 · Mensch und Gemeinschaft · Mädchen und Jungen, Frauen und Männer",
+      "beschluss": ["Hinweis: Der Konferenzbeschluss vom 03.08.2023 verlegt die Sexualkunde in Klasse 3. Ob die Inhalte zu Geschlechtsorganen und Pubertät aus diesem Vorhaben mitwandern, ist noch zu klären."],
       "auszug": ["stellen die Entwicklung vom Säugling zum Erwachsenen dar", "beschreiben typische Rollenerwartungen an Mädchen und Jungen, Frauen und Männer", "entdecken und beschreiben Beispiele für ein verändertes Rollenverständnis", "Lernangebote: Körper verändern sich · die Geschlechtsorgane · Werbung · Veränderung der Rollenverteilung im Laufe der Zeit"],
       "hinweis_fp": ["Begriff Pubertät"] },
-    { "id": "su-34-16", "stufe": "3/4", "titel": "Freundschaft, Sexualität und Hilfe holen", "inhaltsfelder": ["Mensch und Gemeinschaft"], "schlagworte": ["Gefühle", "Sicherheit & Risiko", "Körper"], "kompetenzen_kurz": ["Verhaltensempfehlungen in Risikosituationen kennen", "die Bezeichnungen für die Geschlechtsorgane kennen und um ihre Bedeutung für die sexuelle Entwicklung wissen"],
+    { "id": "su-34-16", "stufe": "3", "titel": "Freundschaft, Sexualität und Hilfe holen", "inhaltsfelder": ["Mensch und Gemeinschaft"], "schlagworte": ["Gefühle", "Sicherheit & Risiko", "Körper"], "kompetenzen_kurz": ["Verhaltensempfehlungen in Risikosituationen kennen", "die Bezeichnungen für die Geschlechtsorgane kennen und um ihre Bedeutung für die sexuelle Entwicklung wissen"],
       "fundstelle": "Klasse 4 · Mensch und Gemeinschaft · Freundschaft und Sexualität",
+      "beschluss": ["Konferenzbeschluss vom 03.08.2023: Die Sexualkunde wird in Klasse 3 verlegt. Das Vorhaben ist deshalb nur noch der Klasse 3 zugeordnet, obwohl der Lehrplan es unter „Ende der Klasse 4“ führt."],
       "auszug": ["kennen Verhaltensempfehlungen in Risikosituationen (z. B. sexuelle Belästigung)", "kennen die Bezeichnungen für die Geschlechtsorgane und wissen um deren Bedeutung für die sexuelle Entwicklung (z. B. Zeugung, Schwangerschaft, Geburt, Verhütung)", "Lernangebote: Alle Menschen brauchen Liebe und Anerkennung · Kinder haben Rechte · Hilfe in Notsituationen (z. B. Nummer gegen Kummer) · Ein Kind wird gezeugt · Entwicklung des Kindes und der Mutter in der Schwangerschaft · die Geburt und die erste Zeit danach"],
       "hinweis_fp": ["Materialien speziell für Menschen mit Hörschädigung der Universität zu Köln"] },
     { "id": "su-34-17", "stufe": "3/4", "titel": "Lebensgewohnheiten anderer Kulturen", "inhaltsfelder": ["Zeit und Kultur"], "schlagworte": ["Kultur", "Feste im Jahreskreis"], "kompetenzen_kurz": ["Lebensgewohnheiten von Menschen anderer Kulturen darstellen", "eine Übersicht zu Fest- und Feiertagen im eigenen Umfeld erstellen"],
@@ -749,7 +752,7 @@ window.TB_DATEN = { basis: [
 
 {
   "schema": "tb-lehrplan-v1", "fach": "Medienunterricht", "schulstufe": "Klasse 3/4",
-  "beschluss": "Stoffverteilungsplan Medienunterricht Jg. 3 und Jg. 4",
+  "beschluss": "Stoffverteilungsplan Jg. 3 und Jg. 4 · Konferenzbeschluss vom 03.08.2023: Medienunterricht ab Schuljahr 2024/25 ab Klasse 3",
   "quelle": "Stoffverteilungsplan_Medienunterricht_Jg3.docx, Stoffverteilungsplan_Medienunterricht_Jg4.docx",
   "vorhaben": [
     { "id": "me-3-1", "stufe": "3", "titel": "Digitale Werkzeuge & Foto-Kunst", "inhaltsfelder": ["Bedienen & Anwenden", "Produzieren & Präsentieren"], "schlagworte": ["Digitale Werkzeuge", "Fotografie"], "kompetenzen_kurz": ["iPad-Grundbedienung und Dateimanagement anwenden", "ein Fotografie-Projekt zu Perspektiven und Schnitttechnik umsetzen"],
