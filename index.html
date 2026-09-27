@@ -286,7 +286,18 @@
   .planstufe-kopf { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--linie); padding-bottom: 8px; }
   .planstufe-kopf b { font-size: 20px; font-weight: 800; letter-spacing: -0.025em; }
   .vorhabenraster { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; }
-  .vorhabenkarte { background: var(--karte); border: 1px solid var(--linie); border-radius: var(--r2); padding: 15px 16px; display: flex; flex-direction: column; gap: 9px; }
+  .vorhabenkarte { background: var(--karte); border: 1px solid var(--linie); border-radius: var(--r2); padding: 15px 16px; display: flex; flex-direction: column; gap: 9px; text-align: left; width: 100%; transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease; }
+  .vorhabenkarte:hover { border-color: var(--linie2); transform: translateY(-2px); box-shadow: var(--schatten-hoch); }
+  .vorhabenkarte .oeffnen { margin-top: auto; padding-top: 2px; }
+  .vorhabenkarte:hover .oeffnen svg { transform: translateX(3px); }
+
+  /* Lehrplan-Auszug im Vorhaben-Blatt */
+  .auszug { border-left: 4px solid var(--linie2); background: var(--karte); border-radius: 0 var(--r3) var(--r3) 0; padding: 13px 15px; display: flex; flex-direction: column; gap: 8px; }
+  .auszug ul, .fp-hinweis ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 5px; }
+  .auszug li { font-size: 14px; line-height: 1.55; color: var(--ink4); text-wrap: pretty; }
+  .auszug .fundstelle { font-size: 11.5px; color: var(--ink3); text-wrap: pretty; }
+  .fp-hinweis { border: 1px solid var(--hinweis-linie); background: var(--hinweis-bg); border-radius: var(--r3); padding: 13px 15px; display: flex; flex-direction: column; gap: 8px; }
+  .fp-hinweis li { font-size: 13.5px; line-height: 1.5; color: var(--ink4); text-wrap: pretty; }
   .vorhabenkarte .kopfzeile { display: flex; align-items: baseline; gap: 9px; }
   .vorhabenkarte .nr { font-size: 12px; color: var(--ink3); font-variant-numeric: tabular-nums; flex: none; }
   .vorhabenkarte .t { font-size: 15px; font-weight: 700; line-height: 1.3; text-wrap: pretty; }
@@ -1193,8 +1204,9 @@
       if (e.typ === "paar") teil = this.inhaltPaar(e);
       else if (e.typ === "fach") teil = this.inhaltFach(e);
       else if (e.typ === "projekt") teil = this.inhaltProjekt(e);
+      else if (e.typ === "vorhaben") teil = this.inhaltVorhaben(e);
       if (!teil) teil = { eyebrow: "", titel: "Nicht mehr verfügbar", unter: "", inhalt: [html`<p key="leer" class="idee">Diese Auswahl gibt es mit den aktuellen Filtern nicht mehr.</p>`] };
-      const schluessel = s.blatt.length + ":" + e.typ + ":" + (e.id || e.a + (e.b || "")) + ":" + (e.stufe || "");
+      const schluessel = s.blatt.length + ":" + e.typ + ":" + (e.id || e.uid || e.a + (e.b || "")) + ":" + (e.stufe || "");
       return html`
         <div data-drucken="aus">
           <div class="blatt-hinter" onClick=${() => this.schliesseBlatt()}></div>
@@ -1304,6 +1316,82 @@
       return {
         eyebrow: "Fach · " + this.stufeLang(e.stufe), titel: e.a,
         unter: (eintrag ? zahlwort(eintrag.anzahl, "Unterrichtsvorhaben", "Unterrichtsvorhaben") + " · " : "") + zahlwort(partner.length, "Partnerfach", "Partnerfächer"),
+        inhalt
+      };
+    }
+
+    // ——— Einzelnes Unterrichtsvorhaben mit Lehrplan-Auszug ———
+    inhaltVorhaben(e) {
+      const d = this.daten();
+      const v = d.vorhaben.filter(x => x.uid === e.uid)[0];
+      if (!v) return null;
+      const plan = this.state.plaene.filter(p => p.fach === v.fach)[0] || {};
+      const liste = (x) => Array.isArray(x) ? x : (x ? [x] : []);
+      const auszug = liste(v.auszug), fp = liste(v.hinweis_fp);
+
+      // Geprüfte Brücken dieses Vorhabens, je Stufe
+      const bruecken = [];
+      (v.stufen || []).forEach(st => this.bruecken(st).forEach(b => {
+        const inA = b.A.some(x => x.uid === v.uid), inB = b.B.some(x => x.uid === v.uid);
+        if ((!inA && !inB) || b.auto || bruecken.some(x => x.key === b.key)) return;
+        bruecken.push({ key: b.key, partner: inA ? b.fb : b.fa, stufe: st, thema: b.thema });
+      }));
+
+      const inhalt = [
+        html`<div key="if" class="fakten">
+          <div class="fakt"><span class="eyebrow">Inhaltsfelder</span><span class="v">${(v.inhaltsfelder || []).join(" · ") || "—"}</span></div>
+          <div class="fakt"><span class="eyebrow">Stufe</span><span class="v">${(v.stufen || []).map(x => this.stufeKurz(x)).join(", ")}</span></div>
+        </div>`,
+
+        auszug.length ? html`
+          <div key="auszug" style="display:flex; flex-direction:column; gap:8px;">
+            <span class="eyebrow">Auszug aus dem Lehrplan</span>
+            <div class="auszug">
+              <ul>${auszug.map((t, i) => html`<li key=${i}>${t}</li>`)}</ul>
+              ${v.fundstelle ? html`<span class="fundstelle">Fundstelle: ${v.fundstelle}${plan.quelle ? " · " + plan.quelle : ""}</span>` : null}
+            </div>
+          </div>`
+          : html`<div key="kein" class="leerkarte">Für dieses Vorhaben ist noch kein Lehrplan-Auszug hinterlegt.</div>`,
+
+        fp.length ? html`
+          <div key="fp" style="display:flex; flex-direction:column; gap:8px;">
+            <span class="eyebrow">Hinweise für den Förderschwerpunkt Hören und Kommunikation</span>
+            <div class="fp-hinweis"><ul>${fp.map((t, i) => html`<li key=${i}>${t}</li>`)}</ul></div>
+          </div>` : null,
+
+        (v.kompetenzen_kurz || []).length ? html`
+          <div key="komp" style="display:flex; flex-direction:column; gap:8px;">
+            <span class="eyebrow">Kurzfassung für die Übersicht</span>
+            <ul style="margin:0; padding-left:18px; font-size:13.5px; line-height:1.5; color:var(--ink4);">
+              ${v.kompetenzen_kurz.map((t, i) => html`<li key=${i}>${t}</li>`)}
+            </ul>
+          </div>` : null,
+
+        v.schlagworte.length ? html`
+          <div key="worte" style="display:flex; flex-direction:column; gap:8px;">
+            <span class="eyebrow">Schlagworte für den Brücken-Abgleich</span>
+            <div class="worte">${v.schlagworte.map(w => html`<span key=${w} class="wort">${w}</span>`)}</div>
+          </div>` : null,
+
+        bruecken.length ? html`
+          <div key="br" class="partnerliste">
+            <span class="eyebrow">Geprüfte Brücken</span>
+            ${bruecken.map(b => html`
+              <button key=${b.key} class="partner" onClick=${() => this.oeffne({ typ: "paar", a: v.fach, b: b.partner, stufe: b.stufe, fokus: b.key }, true)}>
+                <span class="punkt" style=${"background:" + this.farbe(b.partner)}></span>
+                <span class="mitteltext">
+                  <span class="t">${b.thema}</span>
+                  <span class="u">mit ${this.kurz(b.partner)} · ${this.stufeKurz(b.stufe)}</span>
+                </span>
+                <span class="oeffnen">Ansehen ${this.pfeil()}</span>
+              </button>`)}
+          </div>` : null
+      ].filter(Boolean);
+
+      return {
+        eyebrow: "Unterrichtsvorhaben · " + this.kurz(v.fach),
+        titel: v.titel,
+        unter: "Vorhaben " + v.nr + " von " + v.von + (plan.beschluss ? " · " + plan.beschluss : ""),
         inhalt
       };
     }
@@ -1646,15 +1734,15 @@
                   ${liste.map((v, i) => {
                     const partner = d.partner[v.uid] ? Array.from(d.partner[v.uid]).sort((a, b) => this.rang(a) - this.rang(b)).map(f => this.kurz(f)) : [];
                     return html`
-                      <div key=${v.uid} class="vorhabenkarte">
-                        <div class="kopfzeile"><span class="nr">${i + 1}.</span><span class="t">${v.titel}</span></div>
-                        <div class="leise" style="font-size:12.5px; text-wrap:pretty;">${(v.inhaltsfelder || []).join(" · ") || "—"}</div>
-                        <div class="worte">${v.schlagworte.map(w => html`<span key=${w} class="wort">${w}</span>`)}</div>
-                        ${!v.geprueft ? html`<div><span class="pill pill--neu">neu – noch nicht geprüft</span></div>`
-                          : partner.length ? html`<div class="brueckenzeile">Brücken zu ${partner.join(", ")}</div>`
-                          : html`<div class="brueckenzeile keine">Noch keine geprüfte Brücke</div>`}
-                        <div style="font-size:12px; color:var(--ink3);">${[v.kurs || "", v.status || "", v.zeitbedarf_std ? v.zeitbedarf_std + " Unterrichtsstunden" : "Zeitbedarf nicht ausgewiesen"].filter(Boolean).join(" · ")}</div>
-                      </div>`;
+                      <button key=${v.uid} class="vorhabenkarte" onClick=${() => this.oeffne({ typ: "vorhaben", uid: v.uid })}>
+                        <span class="kopfzeile"><span class="nr">${i + 1}.</span><span class="t">${v.titel}</span></span>
+                        <span class="leise" style="font-size:12.5px; text-wrap:pretty;">${(v.inhaltsfelder || []).join(" · ") || "—"}</span>
+                        <span class="worte">${v.schlagworte.map(w => html`<span key=${w} class="wort">${w}</span>`)}</span>
+                        ${!v.geprueft ? html`<span><span class="pill pill--neu">neu – noch nicht geprüft</span></span>`
+                          : partner.length ? html`<span class="brueckenzeile">Brücken zu ${partner.join(", ")}</span>`
+                          : html`<span class="brueckenzeile keine">Noch keine geprüfte Brücke</span>`}
+                        <span class="oeffnen">${v.auszug ? "Lehrplan-Auszug" : "Details"} ${this.pfeil()}</span>
+                      </button>`;
                   })}
                 </div>
               </section>`;
