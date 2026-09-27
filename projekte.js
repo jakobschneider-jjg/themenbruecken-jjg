@@ -46,6 +46,57 @@ window.TB_PROJEKTE = [
       ["", "Filmpremiere für die Parallelklasse oder beim Schulfest."]
     ],
     tipp: "Visuelles Erzählen ist der Kern dieses Projekts – es spielt die Stärke der Bibi-Klassen aus und braucht keinen Ton, um zu funktionieren. Der Stoffverteilungsplan sieht für die Lautsprachklassen parallel das Hörspielprojekt vor; beide Gruppen können ihre Ergebnisse am selben Termin zeigen."
+  },
+
+  {
+    id: "wie-wir-hoeren",
+    titel: "Wie wir hören und verstehen",
+    vorhaben: ["su-ep-11", "dgs-ep23-1"],
+    leitfrage: "Wie kommen Geräusche und Gebärden bei uns an – und was hilft mir, gut zu verstehen?",
+    produkt: "Ausstellung „Unsere Sinne“ in der Lernwerkstatt mit beschriftetem Ohr-Modell und einem Klassenplakat „So verstehe ich gut“",
+    umfang: "ca. 8 Stunden, Sachunterricht und DGS parallel",
+    schritte: [
+      ["su-ep-11", "Lernwerkstatt Sinne: Sehen, Tasten, Riechen, Schmecken und Hören an Stationen ausprobieren und die eigenen Erfahrungen festhalten."],
+      ["su-ep-11", "Das Ohr genauer anschauen: Wie ist es gebaut, welche Aufgabe hat es? Ein großes Ohr-Modell gemeinsam beschriften."],
+      ["dgs-ep23-1", "Im DGS-Unterricht klären: Welche Formen von Hörschädigung gibt es? Wie höre ich selbst, wie hören meine Mitschüler*innen?"],
+      ["dgs-ep23-1", "Kommunikative Strategien sammeln und üben: Licht, Blickkontakt, Gebärdentempo, Nichtverstehen signalisieren, gezielt nachfragen."],
+      ["", "Ausstellung aufbauen: Sinnesstationen, Ohr-Modell und das Plakat mit den gesammelten Strategien. Die Parallelklasse wird eingeladen."]
+    ],
+    tipp: "Das DGS-Curriculum führt „Nichtverstehen signalisieren“ ausdrücklich als kommunikative Strategie. Hier wird sie an einem konkreten Sachthema geübt statt isoliert – und das Sachthema ist die eigene Lebenswirklichkeit der Kinder."
+  },
+
+  {
+    id: "koerper-zwei-sprachen",
+    titel: "Mein Körper – von Kopf bis Fuß, in zwei Sprachen",
+    vorhaben: ["su-34-11", "en-3-10"],
+    leitfrage: "Welche Teile hat mein Körper, was machen sie – und wie heißen sie auf Englisch?",
+    produkt: "Lebensgroßes Körperbild je Gruppe, mehrsprachig beschriftet (deutsch, englisch, ASL-Gebärde)",
+    umfang: "ca. 6 Stunden",
+    schritte: [
+      ["su-34-11", "Körperumrisse auf Packpapier zeichnen, Körperteile benennen und eintragen."],
+      ["su-34-11", "Was machen Herz, Lunge und Magen? Die Funktionen klären und ins Körperbild ergänzen."],
+      ["en-3-10", "Die englischen Bezeichnungen erarbeiten (head, shoulder, knee, toe, ear …) und mit Bewegungsspielen festigen – z. B. „Touch your arm!“, „Clap your hands!“."],
+      ["en-3-10", "Die ASL-Gebärden zu „My Body“ erarbeiten und zu jedem Begriff ein kurzes Video aufnehmen."],
+      ["", "Etiketten dreifach beschriften und ankleben; QR-Codes zu den Gebärdenvideos ergänzen. Galerie im Flur, jede Gruppe stellt ihr Bild vor."]
+    ],
+    tipp: "Das Englisch-Curriculum sieht für „Body“ ohnehin ASL-Gebärden vor – die dreifache Beschriftung entsteht also aus dem Lehrplan heraus und nicht als Zusatzaufwand. Der Song „Head and Shoulders, Knees and Toes“ bietet sich zum Festigen an."
+  },
+
+  {
+    id: "koerper-bei-anstrengung",
+    titel: "Was mein Körper bei Anstrengung macht",
+    vorhaben: ["su-34-11", "sp-34-1"],
+    leitfrage: "Was passiert in meinem Körper, wenn ich mich anstrenge – und wie bleibe ich gesund?",
+    produkt: "Persönlicher „Körper-Check“: Messreihe zu Puls und Atmung vor und nach Belastung, dazu drei eigene Tipps für eine gesunde Lebensführung",
+    umfang: "ca. 8 Stunden, Sport und Sachunterricht parallel",
+    schritte: [
+      ["sp-34-1", "Im Sportunterricht Puls, Atmung und Schwitzen vor und nach einer Belastung wahrnehmen und messen."],
+      ["sp-34-1", "Sich individuell dosiert belasten: die eigene Belastungsgrenze einschätzen und respektieren."],
+      ["su-34-11", "Im Sachunterricht erklären, warum das so ist: Blutkreislauf, Atmung und Verdauung."],
+      ["su-34-11", "Grundsätze gesunder Ernährung und Lebensführung erarbeiten (Ernährungspyramide, Schulobst)."],
+      ["", "Jedes Kind erstellt seinen eigenen Körper-Check: Messwerte, Zeichnung und drei selbst formulierte Tipps."]
+    ],
+    tipp: "Sport und Sachunterricht liefern hier zwei Zugänge zum selben Vorgang: das eigene Erleben in der Bewegung und die Erklärung am Modell. Der Sport-Lehrplan verlangt für Klasse 4 ausdrücklich, dass die Kinder die Ursache-Wirkungs-Zusammenhänge kennen und sich individuell dosiert belasten können."
   }
 
 ];

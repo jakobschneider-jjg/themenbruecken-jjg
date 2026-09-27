@@ -172,7 +172,7 @@ window.TB_DATEN = { basis: [
       "hinweis_fp": ["Gebärdensprachlich orientierte Schülerschaft (ASL): ASL Signs “Feelings”"] },
     { "id": "en-3-10", "stufe": "3", "titel": "Body", "inhaltsfelder": ["Persönliche Lebenswelt"], "schlagworte": ["Körper"], "kompetenzen_kurz": ["Körperteile benennen"],
       "fundstelle": "Klasse 3 · Thema „Body“ · Teil 2 des schulinternen Curriculums",
-      "auszug": ["Verbindlicher Wortschatz: head, shoulder, knee, toe, eye, ear, mouth, nose, hand, chest, leg, foot, hair, finger, belly, back,", "bottom", "bottom", "Mögliche grammatikalische Strukturen:", "ausgewählte Pronomen im chunk (z.B. Touch your arm!- Clap your hands!)", "Ideen zur inhaltlichen Ausgestaltung:", "Song: Head and Shoulder, Knees and Toes", "Fächerübergreifend mit dem Thema Body Percussion verbinden"],
+      "auszug": ["Verbindlicher Wortschatz: head, shoulder, knee, toe, eye, ear, mouth, nose, hand, chest, leg, foot, hair, finger, belly, back, bottom", "Mögliche grammatikalische Strukturen:", "ausgewählte Pronomen im chunk (z.B. Touch your arm!- Clap your hands!)", "Ideen zur inhaltlichen Ausgestaltung:", "Song: Head and Shoulder, Knees and Toes", "Fächerübergreifend mit dem Thema Body Percussion verbinden"],
       "hinweis_fp": ["Gebärdensprachlich orientierte Schülerschaft (ASL): ASL Signs “My Body”", "Einführung ASL Signs Pronomen", "ASL Storytelling online"] },
     { "id": "en-3-11", "stufe": "3", "titel": "Transport", "inhaltsfelder": ["Persönliche Lebenswelt"], "schlagworte": ["Alltag & Lebenswelt"], "kompetenzen_kurz": ["Verkehrsmittel benennen"],
       "fundstelle": "Klasse 3 · Thema „Transport“ · Teil 2 des schulinternen Curriculums",
