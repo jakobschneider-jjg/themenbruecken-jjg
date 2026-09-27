@@ -1343,6 +1343,12 @@
           <div class="fakt"><span class="eyebrow">Stufe</span><span class="v">${(v.stufen || []).map(x => this.stufeKurz(x)).join(", ")}</span></div>
         </div>`,
 
+        liste(v.kompetenzbereiche).length ? html`
+          <div key="kb" style="display:flex; flex-direction:column; gap:8px;">
+            <span class="eyebrow">Prozessbezogene Kompetenzbereiche</span>
+            <div class="worte">${liste(v.kompetenzbereiche).map(w => html`<span key=${w} class="wort">${w}</span>`)}</div>
+          </div>` : null,
+
         auszug.length ? html`
           <div key="auszug" style="display:flex; flex-direction:column; gap:8px;">
             <span class="eyebrow">Auszug aus dem Lehrplan</span>
