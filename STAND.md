@@ -60,4 +60,11 @@ Wer die Kacheln zählt, zählt zu hoch – das ist kein Fehler.
 - Das Repository ist oeffentlich, die Inhalte sind also unabhaengig von der Seite auf github.com lesbar.
   Echter Passwortschutz ginge nur mit Wechsel des Hostings (z. B. Cloudflare Pages + Access) - vertagt.
 - Kommentarfunktion und Vorschlagsformular: besprochen, vorerst zurueckgestellt.
+
+## Einzeldatei-Version
+`python3 build_einzeldatei.py` baut aus index.html + den drei Datendateien EINE Datei
+`themenbruecken-einzeldatei.html` (ca. 750 KB): Schriften, Preact/htm, Logo und Daten sind
+eingebettet. Getestet: laedt ohne jede externe Anfrage, laeuft ohne Server und ohne Internet.
+Gedacht fuer Dateiablagen (Logineo-Cloud, LMS), die keine Ordnerstruktur ausliefern.
+Nach Aenderungen an den Datendateien neu bauen - die Einzeldatei aktualisiert sich NICHT von selbst.
 - Farbpalette: 10 Fächer auf Hue-Wheel verteilt, kontrastgeprüft (≥4.5:1 auf Weiß) – Werte in `FARBEN`/`TINTE` in index.html.
