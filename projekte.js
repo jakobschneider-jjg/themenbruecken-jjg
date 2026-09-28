@@ -98,5 +98,41 @@ window.TB_PROJEKTE = [
     ],
     tipp: "Sport und Sachunterricht liefern hier zwei Zugänge zum selben Vorgang: das eigene Erleben in der Bewegung und die Erklärung am Modell. Der Sport-Lehrplan verlangt für Klasse 4 ausdrücklich, dass die Kinder die Ursache-Wirkungs-Zusammenhänge kennen und sich individuell dosiert belasten können."
   }
+,
+  {
+    id: "body-percussion",
+    titel: "Body Percussion – mein Körper macht Musik",
+    vorhaben: ["en-3-10", "rh-34-2"],
+    leitfrage: "Wie kann mein Körper ein Instrument sein – und wie sage ich auf Englisch, was gerade klingt?",
+    produkt: "Eine Klassen-Partitur „Our Body Groove“ mit selbst erfundenen Körperklängen, aufgeführt und als Video festgehalten",
+    umfang: "ca. 6 Stunden, Englisch und Musik parallel",
+    schritte: [
+      ["rh-34-2", "Klänge sammeln: Was klingt an mir? Klatschen, Patschen, Stampfen, Schnipsen, Brustklopfen – jedes Kind erfindet einen eigenen Klang und zeigt ihn der Gruppe."],
+      ["en-3-10", "Die Körperteile auf Englisch benennen (hand, knee, chest, foot, finger …) und über den Klang festigen: Wer „knee“ hört, patscht auf die Knie."],
+      ["en-3-10", "Chunks als Spielanweisung nutzen: „Clap your hands!“, „Touch your knee!“, „Stamp your feet!“ – ein Kind gibt die Anweisung, die Gruppe antwortet mit dem Klang."],
+      ["rh-34-2", "Aus den Klängen wird ein Rhythmus: Die Klasse legt eine feste Reihenfolge fest und übt sie zu einem gleichmäßigen Puls (Anknüpfung an „Ich, ich und mein Stuhl“ und die Trommelschule)."],
+      ["rh-34-2", "Die Partitur aufschreiben – mit Bildzeichen für jeden Körperklang und dem englischen Wort daneben. So kann jede Gruppe die Abfolge lesen und wiederholen."],
+      ["", "Aufführung: Die Klasse spielt ihre Partitur, ein Kind dirigiert. Das Video kommt mit QR-Code an die Partitur im Flur."]
+    ],
+    tipp: "Diese Brücke steht ausdrücklich so im Englisch-Curriculum: Beim Thema „Body“ ist als Idee zur inhaltlichen Ausgestaltung „fächerübergreifend mit dem Thema Body Percussion verbinden“ notiert. Für die gebärdensprachlich orientierten Kinder ist Body Percussion besonders tragfähig – der Rhythmus ist sichtbar und über den Körper spürbar, nicht nur hörbar. Die dirigierende Rolle sollte reihum gehen, damit alle einmal den Puls vorgeben."
+  },
+
+  {
+    id: "grenzen-und-hilfe",
+    titel: "Meine Grenzen – im Klassenzimmer und im Chat",
+    vorhaben: ["su-34-16", "me-3-4"],
+    leitfrage: "Woran merke ich, dass eine Grenze überschritten wird – und wo bekomme ich Hilfe?",
+    produkt: "Klassenvereinbarung „So gehen wir miteinander um – hier und im Chat“ plus eine Hilfe-Karte im Format einer Visitenkarte für jedes Kind",
+    umfang: "ca. 8 Stunden, Sachunterricht und Medienunterricht parallel",
+    schritte: [
+      ["su-34-16", "Gefühle benennen: An Bildkarten und kurzen Szenen klären, was sich gut anfühlt und was nicht – und dass das eigene Gefühl zählt, auch wenn andere es anders sehen."],
+      ["su-34-16", "Kinderrechte und Verhaltensempfehlungen: Nein sagen, weggehen, jemandem davon erzählen. Die Regeln werden in Rollenspielen geübt, nicht nur besprochen."],
+      ["me-3-4", "Dieselben Situationen im Netz: Klassenchat-Regeln erarbeiten – was schreibe ich, was schreibe ich nicht, was ist privat und was ist öffentlich? Arbeit mit den Internet-ABC-Lernmodulen."],
+      ["me-3-4", "Was tun, wenn im Chat eine Grenze überschritten wird? Nicht antworten, Screenshot machen, Erwachsenen zeigen – die Schritte werden als Bildfolge festgehalten."],
+      ["", "Wo bekomme ich Hilfe? Vertrauenspersonen in der Schule und zu Hause sammeln, dazu die Nummer gegen Kummer. Jedes Kind gestaltet seine eigene Hilfe-Karte fürs Mäppchen."],
+      ["", "Die Klassenvereinbarung wird gemeinsam formuliert, von allen unterschrieben und sichtbar aufgehängt – in Schrift und als Gebärdenvideo über QR-Code."]
+    ],
+    tipp: "Dieses Projekt deckt bewusst nur den Grenz- und Hilfe-Strang des Sachunterrichtsvorhabens ab; die Inhalte zu Zeugung, Schwangerschaft und Geburt laufen daneben im Sachunterricht weiter. Für hörgeschädigte Kinder ist der Punkt „Hilfe holen“ besonders wichtig: Wer beiläufig Gesagtes nicht mitbekommt, braucht klar vereinbarte Wege und benannte Personen. Die Materialien der Universität zu Köln speziell für Menschen mit Hörschädigung sind hier hilfreich. Die Vertrauenspersonen sollten vorher wissen, dass sie genannt werden."
+  }
 
 ];
