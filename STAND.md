@@ -52,5 +52,12 @@ Wer die Kacheln zählt, zählt zu hoch – das ist kein Fehler.
 - Offen seit 03.08.2023: Ob die Inhalte zu Geschlechtsorganen/Pubertät in `su-34-15` mit der Sexualkunde
   nach Klasse 3 wandern. Das Vorhaben steht weiter auf `"3/4"`, mit `beschluss`-Hinweis.
 - Weitere Brücken sollten gemeinsam mit Jakob durchgegangen werden (Toggle "Ungeprüfte Vorschläge zeigen" in der App).
-- Kein Zugriffsschutz (bewusst so gewünscht, Hosting über internen Link/Logineo).
+- Kein Zugriffsschutz (bewusst so entschieden). Seit 28.09.2026 aber `noindex, nofollow` im `<head>`:
+  die Seite soll nicht über Suchmaschinen auffindbar sein, nur über den direkten Link.
+  Eine `robots.txt` im Repo würde NICHTS bewirken - Projektseiten liegen unter
+  `username.github.io/repo/`, gelesen wird aber nur `username.github.io/robots.txt`, und die
+  gehört einem anderen Repo. Das Meta-Tag ist hier der einzige wirksame Hebel.
+- Das Repository ist oeffentlich, die Inhalte sind also unabhaengig von der Seite auf github.com lesbar.
+  Echter Passwortschutz ginge nur mit Wechsel des Hostings (z. B. Cloudflare Pages + Access) - vertagt.
+- Kommentarfunktion und Vorschlagsformular: besprochen, vorerst zurueckgestellt.
 - Farbpalette: 10 Fächer auf Hue-Wheel verteilt, kontrastgeprüft (≥4.5:1 auf Weiß) – Werte in `FARBEN`/`TINTE` in index.html.
