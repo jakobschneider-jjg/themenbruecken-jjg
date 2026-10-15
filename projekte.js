@@ -133,6 +133,27 @@ window.TB_PROJEKTE = [
       ["", "Die Klassenvereinbarung wird gemeinsam formuliert, von allen unterschrieben und sichtbar aufgehängt – in Schrift und als Gebärdenvideo über QR-Code."]
     ],
     tipp: "Dieses Projekt deckt bewusst nur den Grenz- und Hilfe-Strang des Sachunterrichtsvorhabens ab; die Inhalte zu Zeugung, Schwangerschaft und Geburt laufen daneben im Sachunterricht weiter. Für hörgeschädigte Kinder ist der Punkt „Hilfe holen“ besonders wichtig: Wer beiläufig Gesagtes nicht mitbekommt, braucht klar vereinbarte Wege und benannte Personen. Die Materialien der Universität zu Köln speziell für Menschen mit Hörschädigung sind hier hilfreich. Die Vertrauenspersonen sollten vorher wissen, dass sie genannt werden."
+  },
+
+  {
+    id: "halloween-skelett-tanz",
+    titel: "Halloween: Skelette tanzen vor dem Greenscreen",
+    vorhaben: ["rh-34-2", "rh-34-4", "mu-34-4", "me-3-1"],
+    weitere: "Baustein 1 (Skeleton Dance mit Mitspielsatz) ist im Herbst 2026 in einer Bibi-Klasse geplant; die TikTok-Tanz-Challenge und der Greenscreen-Teil sind noch nicht erprobt.",
+    leitfrage: "Wie wird aus unserem Tanz ein gruseliges Video – ohne dass man unsere Gesichter sieht?",
+    produkt: "Kurzes Tanzvideo pro Gruppe: Skelett-Tanz vor einem selbst mit KI erzeugten Halloween-Hintergrund, gezeigt beim Halloween-Kino der Klasse",
+    umfang: "ca. 3 Doppelstunden Musik plus ca. 4 Stunden Medienunterricht, sinnvoll in den Wochen vor den Herbstferien (Schätzung, noch nicht erprobt)",
+    schritte: [
+      ["rh-34-2", "Einstieg Halloween: Den Disney-Kurzfilm „The Skeleton Dance“ (1929) gemeinsam anschauen. Schon beim ersten Sehen den Puls über Absehen und Resthören mitklatschen."],
+      ["rh-34-2", "Mitspielsatz zum „Skeleton Dance“ (musication-Video): Jede Gruppe hat ein Instrument – Handtrommel, Tamburin, Klanghölzer, Shaker/Triangel – und spielt, wenn ihr Symbol im Video erscheint. Ruhiger Ausklang: einen Skelett-Hampelmann mit Musterklammern basteln und die Gelenke bewegen."],
+      ["rh-34-4 mu-34-4", "TikTok-Tanz-Challenge zu „Spooky Scary Skeletons“ (Material aus Popig, Lugert Verlag): Den Song in Teile gliedern, jedem Teil eine Bewegung zuordnen und den Tanz in Gruppen sicher üben – mit Tanzkarte, Farben und Fachwörtern statt viel Text."],
+      ["me-3-1", "Wie funktioniert ein Greenscreen? Mit einem grünen Tuch ausprobieren, was „verschwindet“, und dabei klären: Das iPad muss fest stehen, das Licht gleichmäßig sein, niemand trägt Grün – außer der Gesichtsmaske."],
+      ["me-3-1", "Hintergrundbilder mit dem KI-Bildgenerator in fobizz entwerfen: Gemeinsam beschreiben, was auf dem Bild zu sehen sein soll (Friedhof, Spukschloss, Mondnacht …), mehrere Bilder vergleichen und eines auswählen. Dabei besprechen: Das Bild ist erfunden, nicht fotografiert."],
+      ["me-3-1", "Dreh: Die Gruppen tanzen vor dem Greenscreen und tragen grüne Gesichtsmasken aus dem Karnevalsbedarf. Das Gesicht wird dadurch im Video durch den Hintergrund ersetzt – ein gruseliger Effekt, und die Kinder sind nicht erkennbar. Rollen: Tanz, Kamera, Regie."],
+      ["me-3-1", "Schnitt in „Green Screen by Do Ink“: Tanzvideo und KI-Hintergrund übereinanderlegen, Anfang und Ende kürzen, Ergebnis prüfen: Sieht man noch grüne Ränder?"],
+      ["", "Halloween-Kino: Die Videos werden der Klasse oder der Parallelklasse gezeigt. Das Publikum rät, welche Gruppe hinter welchem Skelett steckt."]
+    ],
+    tipp: "Die grüne Maske macht die Gesichter unsichtbar, aber nicht alle Kinder unkenntlich – Körper, Kleidung und Bewegung bleiben erkennbar. Für Aufnahmen gilt deshalb weiter die Einwilligung der Eltern, und die Videos bleiben im Schulnetz statt auf TikTok oder anderen Plattformen; das gilt auch, weil die Musik urheberrechtlich geschützt ist. Die KI-Bilder entstehen über den Lehrkraft-Zugang bzw. die fobizz-Klassenräume, nicht über private Konten der Kinder. „Green Screen by Do Ink“ ist nur auf einzelnen iPads installiert – Dreh und Schnitt deshalb als Stationen planen. Für die Bibi-Klassen trägt der Tanz besonders gut, weil Puls und Form sichtbar sind; ein Lichtsignal oder eine Lehrkraft als Vortänzer*in hilft beim gemeinsamen Einsatz."
   }
 
 ];
