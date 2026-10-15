@@ -149,7 +149,7 @@ window.TB_PROJEKTE = [
       ["rh-34-4 mu-34-4", "TikTok-Tanz-Challenge zu „Spooky Scary Skeletons“ (Material aus Popig, Lugert Verlag): Den Song in Teile gliedern, jedem Teil eine Bewegung zuordnen und den Tanz in Gruppen sicher üben – mit Tanzkarte, Farben und Fachwörtern statt viel Text."],
       ["me-3-1", "Wie funktioniert ein Greenscreen? Mit einem grünen Tuch ausprobieren, was „verschwindet“, und dabei klären: Das iPad muss fest stehen, das Licht gleichmäßig sein, niemand trägt Grün – außer der Gesichtsmaske."],
       ["me-3-1", "Hintergrundbilder mit dem KI-Bildgenerator in fobizz entwerfen: Gemeinsam beschreiben, was auf dem Bild zu sehen sein soll (Friedhof, Spukschloss, Mondnacht …), mehrere Bilder vergleichen und eines auswählen. Dabei besprechen: Das Bild ist erfunden, nicht fotografiert."],
-      ["me-3-1", "Dreh: Die Gruppen tanzen vor dem Greenscreen und tragen grüne Gesichtsmasken aus dem Karnevalsbedarf. Das Gesicht wird dadurch im Video durch den Hintergrund ersetzt – ein gruseliger Effekt, und die Kinder sind nicht erkennbar. Rollen: Tanz, Kamera, Regie."],
+      ["me-3-1", "Dreh: Die Gruppen tanzen vor dem Greenscreen und tragen grüne Gesichtsmasken aus dem Karnevalsbedarf. Das Gesicht wird dadurch im Video durch den Hintergrund ersetzt – ein gruseliger Effekt, und die Gesichter sind im Video nicht zu sehen. Rollen: Tanz, Kamera, Regie."],
       ["me-3-1", "Schnitt in „Green Screen by Do Ink“: Tanzvideo und KI-Hintergrund übereinanderlegen, Anfang und Ende kürzen, Ergebnis prüfen: Sieht man noch grüne Ränder?"],
       ["", "Halloween-Kino: Die Videos werden der Klasse oder der Parallelklasse gezeigt. Das Publikum rät, welche Gruppe hinter welchem Skelett steckt."]
     ],
