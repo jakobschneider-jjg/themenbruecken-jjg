@@ -1,6 +1,6 @@
 # Themenbrücken – Johann-Joseph-Gronewaldschule (Köln)
 
-Stand: 2026-10-15. Diese Datei ist die Übergabe für neue Claude-Unterhaltungen zu diesem Projekt.
+Stand: 2026-11-23. Diese Datei ist die Übergabe für neue Claude-Unterhaltungen zu diesem Projekt.
 
 ## Was das ist
 Interaktive Website, die fächerübergreifende Unterrichtsverbindungen ("Themenbrücken") sichtbar macht.
@@ -47,6 +47,10 @@ in `projekte.js` angelegt werden soll. Nicht ungefragt anlegen, aber auch nicht 
 Wer die Kacheln zählt, zählt zu hoch – das ist kein Fehler.
 
 ## Offene Punkte
+- Materialablage (23.11.2026): Vorhaben können ein Feld `material` (Link) haben; im Vorhaben-Fenster erscheint dann
+  der Knopf „Material in Edumaps“. Aktuell alle 18 Sport-Vorhaben → je eine Spalte der Edumap „Sportmaterial“
+  (https://nrw.edumaps.de/199263/53070/eqn2fipzl821/xvl2e4hlnlnr, Spalten = Vorhabentitel, Link = Map-Adresse + #Vorhaben-ID, Sprungmarke !#sp-… muss in der obersten Box jeder Spalte stehen).
+  Weitere Fächer können nach demselben Muster folgen.
 - Projekt `halloween-skelett-tanz` (15.10.2026): Baustein 1 (Skeleton Dance + musication-Mitspielsatz) war für die letzte Stunde vor den Herbstferien 2026 geplant. Nach der Durchführung bei Jakob nachfragen, ob `erprobt` gesetzt werden soll; TikTok-Challenge/Greenscreen-Teil ist Zukunftsidee.
 - Alle 8 Projektideen sind Entwürfe: nicht erprobt, nicht von der Fachkonferenz beschlossen.
   Was sich bewährt, bekommt im Projekt das Feld `erprobt: "In Klasse X im Schuljahr Y/Z erprobt"`.
@@ -68,4 +72,11 @@ Wer die Kacheln zählt, zählt zu hoch – das ist kein Fehler.
 eingebettet. Getestet: laedt ohne jede externe Anfrage, laeuft ohne Server und ohne Internet.
 Gedacht fuer Dateiablagen (Logineo-Cloud, LMS), die keine Ordnerstruktur ausliefern.
 Nach Aenderungen an den Datendateien neu bauen - die Einzeldatei aktualisiert sich NICHT von selbst.
+
+## Fassung für die Gronewald-App
+`python3 gronewald_variante.py <Pfad>/Gronewald-App-Vorschau/apps/themenbruecken/index.html` macht aus der
+Einzeldatei die Hub-Fassung: setzt `window.TB_HUB` (Knopf „← Alle Apps“ in der Kopfleiste, Fußzeile
+„Übersicht aller Schul-Apps“, beide auf `../../index.html`) und das Favicon der Gronewald-App.
+Ohne `TB_HUB` (GitHub Pages, Einzeldatei) erscheinen beide Links nicht. Reihenfolge: erst
+`build_einzeldatei.py`, dann `gronewald_variante.py`. Die Datei in der Gronewald-App nie von Hand ändern.
 - Farbpalette: 10 Fächer auf Hue-Wheel verteilt, kontrastgeprüft (≥4.5:1 auf Weiß) – Werte in `FARBEN`/`TINTE` in index.html.

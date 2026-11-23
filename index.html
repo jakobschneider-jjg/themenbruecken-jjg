@@ -55,6 +55,12 @@
   .logo-knopf { border: 0; background: none; padding: 4px; margin: -4px; border-radius: var(--r3); display: block; transition: transform 240ms cubic-bezier(0.34, 1.56, 0.64, 1); }
   .logo-knopf:hover { transform: scale(1.04); }
   .logo-knopf img { height: 42px; width: auto; display: block; filter: var(--logo-filter); }
+  /* Rückweg zu einem Schul-Hub (nur wenn window.TB_HUB gesetzt ist, z. B. in der Gronewald-App) */
+  .hub-link { min-height: 44px; flex: none; text-decoration: none; }
+  .hub-umbruch { display: none; }
+  @media (max-width: 720px) { .marke:has(.hub-link) { flex-wrap: wrap; row-gap: 10px; } .hub-umbruch { display: block; flex-basis: 100%; height: 0; } }
+  .hubfuss { max-width: 1360px; margin: 0 auto; padding: 0 24px 32px; font-size: 13.5px; color: var(--ink2); }
+  .hubfuss a { color: var(--akzent2); font-weight: 600; }
   .trenner { width: 1px; height: 42px; background: var(--linie2); flex: none; }
   .titel { margin: 1px 0 0; font-family: var(--font-kopf); font-size: 30px; line-height: 1.1; font-weight: 700; letter-spacing: -0.01em; }
   .unterzeile { font-size: 13.5px; color: var(--ink2); margin-top: 3px; }
@@ -631,7 +637,8 @@
       const sig = this.planSig();
       if (this._d && this._d.sig === sig) return this._d;
       const basisTitel = {};
-      window.TB_DATEN.basis.forEach(p => (p.vorhaben || []).forEach(v => { if (v.id) basisTitel[v.id] = v.titel; }));
+      const basisMaterial = {};
+      window.TB_DATEN.basis.forEach(p => (p.vorhaben || []).forEach(v => { if (v.id) { basisTitel[v.id] = v.titel; if (v.material) basisMaterial[v.id] = v.material; } }));
       const vorhaben = [], byId = {};
       this.state.plaene.forEach(p => {
         const proStufe = {}, lauf = {};
@@ -643,7 +650,8 @@
             fach: p.fach, uid: v.id || (p.fach + ":" + v.titel),
             stufen: String(v.stufe || "").split("/").map(x => x.trim()).filter(Boolean),
             nr: lauf[k], von: proStufe[k], schlagworte: v.schlagworte || [],
-            geprueft: !!v.id && basisTitel[v.id] === v.titel
+            geprueft: !!v.id && basisTitel[v.id] === v.titel,
+            material: v.material || (v.id && basisMaterial[v.id]) || ""
           });
           o.woerter = woerter(o);
           vorhaben.push(o);
@@ -863,6 +871,7 @@
           <div class="kopfleiste" data-drucken="aus">
             <header class="kopf">
               <div class="marke">
+                ${window.TB_HUB ? html`<a class="knopf hub-link" href=${window.TB_HUB.href} title="Zur Übersicht aller Schul-Apps">${window.TB_HUB.text || "← Alle Apps"}</a><span class="hub-umbruch"></span>` : null}
                 <button class="logo-knopf" title="Zur Stufenansicht" onClick=${() => this.setState({ ansicht: "stufe", blatt: [], planFach: null, mZelle: null, mFach: null })}>
                   <img src="./assets/logo.jpg" alt="Johann-Joseph-Gronewaldschule" />
                 </button>
@@ -888,6 +897,7 @@
             ${s.ansicht === "merkliste" ? this.renderMerkliste() : null}
             ${s.ansicht === "plaene" ? this.renderPlaene() : null}
           </main>
+          ${window.TB_HUB ? html`<footer class="hubfuss" data-drucken="aus"><a href=${window.TB_HUB.href}>Übersicht aller Schul-Apps</a></footer>` : null}
           ${this.renderBlatt()}
           ${s.toast ? html`<div class="toast" role="status" data-drucken="aus">${s.toast}</div>` : null}
         </div>`;
@@ -1350,6 +1360,12 @@
           <div class="fakt"><span class="eyebrow">Inhaltsfelder</span><span class="v">${(v.inhaltsfelder || []).join(" · ") || "—"}</span></div>
           <div class="fakt"><span class="eyebrow">Stufe</span><span class="v">${(v.stufen || []).map(x => this.stufeKurz(x)).join(", ")}</span></div>
         </div>`,
+
+        v.material ? html`
+          <div key="material" style="display:flex; flex-direction:column; gap:8px;">
+            <span class="eyebrow">Material</span>
+            <a class="knopf" style="align-self:flex-start; text-decoration:none;" href=${v.material} target="_blank" rel="noopener">Material in Edumaps ${this.pfeil()}</a>
+          </div>` : null,
 
         liste(v.kompetenzbereiche).length ? html`
           <div key="kb" style="display:flex; flex-direction:column; gap:8px;">
