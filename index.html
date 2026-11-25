@@ -671,7 +671,7 @@
         let B = String(ib).split(/\s+/).map(x => byId[x]).filter(v => v && v.geprueft);
         if (!A.length || !B.length || A[0].fach === B[0].fach) return;
         if (this.rang(A[0].fach) > this.rang(B[0].fach)) { const t = A; A = B; B = t; }
-        kur.push({ key: "k:" + ia + "~" + ib, A, B, staerke: st === 2 ? 2 : 1, thema, idee });
+        kur.push({ key: "k:" + ia + "~" + ib, A, B, staerke: st === 2 ? 2 : st === 0 ? 0 : 1, offen: st === 0, thema, idee });
         A.forEach(a => B.forEach(b => kurPaare.add(paarKey(a.uid, b.uid))));
         A.forEach(a => { (partner[a.uid] = partner[a.uid] || new Set()).add(B[0].fach); });
         B.forEach(b => { (partner[b.uid] = partner[b.uid] || new Set()).add(A[0].fach); });
@@ -739,7 +739,8 @@
       d.kur.forEach(k => {
         const A = k.A.filter(inSt), B = k.B.filter(inSt);
         if (!A.length || !B.length) return;
-        liste.push({ key: k.key, A, B, fa: A[0].fach, fb: B[0].fach, staerke: k.staerke, thema: k.thema, idee: k.idee, auto: false, pflicht: true });
+        // Stärke 0 = von Hand vorgeschlagen, noch nicht bestätigt: erscheint wie ein ungeprüfter Vorschlag (gestrichelt, nur mit „Ungeprüfte Vorschläge zeigen“), behält aber seine Idee.
+        liste.push({ key: k.key, A, B, fa: A[0].fach, fb: B[0].fach, staerke: k.staerke, thema: k.thema, idee: k.idee, auto: !!k.offen, hand: true, pflicht: !k.offen });
       });
       const vs = d.vorhaben.filter(inSt);
       for (let i = 0; i < vs.length; i++) {
@@ -829,7 +830,7 @@
       const idee = {
         id: "i" + Date.now(), key,
         titel: b.thema + " – " + this.kurz(b.fa) + " & " + this.kurz(b.fb),
-        faecher: [b.fa, b.fb], stufe: this.stufeKurz(stufe), idee: b.auto ? "" : b.idee,
+        faecher: [b.fa, b.fb], stufe: this.stufeKurz(stufe), idee: b.auto && !b.hand ? "" : b.idee,
         vorhaben: b.A.concat(b.B).map(v => this.kurz(v.fach) + ": " + v.titel),
         chips: [b.thema], notiz: ""
       };
