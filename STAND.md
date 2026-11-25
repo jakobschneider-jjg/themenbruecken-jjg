@@ -1,6 +1,6 @@
 # Themenbrücken – Johann-Joseph-Gronewaldschule (Köln)
 
-Stand: 2026-11-23. Diese Datei ist die Übergabe für neue Claude-Unterhaltungen zu diesem Projekt.
+Stand: 2026-11-25. Diese Datei ist die Übergabe für neue Claude-Unterhaltungen zu diesem Projekt.
 
 ## Was das ist
 Interaktive Website, die fächerübergreifende Unterrichtsverbindungen ("Themenbrücken") sichtbar macht.
@@ -35,6 +35,8 @@ Zwei Wege parallel:
    Schlagwort reicht meistens NICHT für die Schwelle; es braucht zwei Treffer oder ein sehr seltenes Schlagwort.
 2. **Von Jakob bestätigt** (durchgezogen, `bruecken.js`): reale, im Unterricht gelebte Verzahnungen, die kein
    Algorithmus erraten kann. Aktuell 8 Definitionen (seit 15.10.2026 neu: Skelett-Tanz vor dem Greenscreen, Musik × Medienunterricht Kl. 3).
+
+**Noch nicht bestätigte Brücken (seit 25.11.2026):** Stärke `0` in `bruecken.js` = von Jakob angeregt, aber noch nicht bestätigt. Sie erscheint wie ein ungeprüfter Vorschlag (gestrichelt, nur mit „Ungeprüfte Vorschläge zeigen“), behält aber ihre Idee. Nach Bestätigung auf 1 oder 2 setzen (dann Projektfrage stellen, s. u.). Aktuell: „Lesewerkstatt: von der Gebärde zur Schrift“ (Deutsch Lesen × DGS, alle Stufen) zur geplanten Leselern-App.
 
 **Wichtig für neue Brücken:** Wenn Jakob eine reale Verzahnung nennt, direkt in `bruecken.js` eintragen
 (Format: `[idA, idB, Stärke 1|2, Thema, Idee-Satz]`) statt zu versuchen, sie über Schlagwörter zu erzwingen.

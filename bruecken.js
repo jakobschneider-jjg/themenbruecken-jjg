@@ -3,11 +3,13 @@
 //
 // Format: [Vorhaben Fach A, Vorhaben Fach B, Stärke, Thema, Brückenidee]
 //   Vorhaben – id aus daten.js
-//   Stärke   – 2 = eng verzahnt (fast dasselbe Thema), 1 = ergänzend (gute Verbindung, anderer Zugang)
+//   Stärke   – 2 = eng verzahnt (fast dasselbe Thema), 1 = ergänzend (gute Verbindung, anderer Zugang),
+//              0 = von Hand vorgeschlagen, noch NICHT bestätigt (erscheint gestrichelt unter „Ungeprüfte Vorschläge“;
+//                  nach Bestätigung durch Jakob auf 1 oder 2 setzen)
 //   Thema    – kurzer Name der Brücke
 //   Idee     – ein Satz, wie die Fächer zusammenarbeiten könnten
 window.TB_BRUECKEN = {
-  stand: "15.10.2026",
+  stand: "25.11.2026",
   liste: [
     ["me-3-2", "su-34-2", 2, "Tiere präsentieren", "Ein Sachunterrichts-Thema zu einem Tier (z. B. Haustier, Zootier) wird in Medienunterricht als Keynote-Präsentation mit Fotos und Fakten aufbereitet."],
     ["me-4-2", "ku-34-6", 2, "Figuren bauen und zum Leben erwecken", "Im Kunstunterricht gebastelte Figuren (z. B. aus Draht und formbaren Materialien) werden in Medienunterricht Bild für Bild zu einem Stop-Motion-Film animiert."],
@@ -16,6 +18,7 @@ window.TB_BRUECKEN = {
     ["su-34-11", "sp-34-1", 2, "Was der Körper bei Anstrengung macht", "Im Sport werden Puls, Atmung und Schwitzen bei Belastung erlebt und gemessen, im Sachunterricht wird erklärt, was dabei im Körper passiert."],
     ["en-3-10", "rh-34-2", 2, "Body Percussion", "Die englischen Körperteile werden zum Instrument: Das Englisch-Curriculum schlägt für das Thema „Body“ ausdrücklich die Verbindung mit Body Percussion vor, die in Musik mit Körperinstrumenten erarbeitet wird."],
     ["su-34-16", "me-3-4", 2, "Grenzen, Risiken und Hilfe holen", "Der Sachunterricht behandelt Verhaltensempfehlungen in Risikosituationen und wo man Hilfe bekommt, der Medienunterricht überträgt das auf Klassenchat-Regeln und sicheres Verhalten im Netz. (Zuvor an das Klasse-4-Vorhaben „Mein digitales Ich“ gekoppelt – nach der Verlegung der Sexualkunde in Klasse 3 umgehängt.)"],
-    ["rh-34-2 rh-34-4 mu-34-4", "me-3-1", 2, "Skelett-Tanz vor dem Greenscreen", "Zu Halloween lernt die Klasse in Musik Skelett-Tänze und einen Mitspielsatz, der Medienunterricht nimmt den Tanz vor dem Greenscreen auf und setzt die Tänzer*innen vor selbst mit KI erzeugte Hintergründe – ein „unmögliches Video“ im Sinne des Projekts „Die Welt durch die Linse“."]
+    ["rh-34-2 rh-34-4 mu-34-4", "me-3-1", 2, "Skelett-Tanz vor dem Greenscreen", "Zu Halloween lernt die Klasse in Musik Skelett-Tänze und einen Mitspielsatz, der Medienunterricht nimmt den Tanz vor dem Greenscreen auf und setzt die Tänzer*innen vor selbst mit KI erzeugte Hintergründe – ein „unmögliches Video“ im Sinne des Projekts „Die Welt durch die Linse“."],
+    ["de-ep1-3 de-ep23-2 de-ep23-4 de-3-2 de-4-2", "dgs-ep1-3 dgs-ep1-4 dgs-ep23-1 dgs-ep23-2 dgs-3-2 dgs-3-3 dgs-4-1 dgs-4-2", 0, "Lesewerkstatt: von der Gebärde zur Schrift", "Eine geplante Leselern-App verkettet Gebärde, Fingeralphabet, Bild und Schriftwort; ihre Satz- und Textaufgaben greifen auf, was der DGS-Unterricht gerade erarbeitet (W-Fragen, Satzbau, Verneinung, gebärdete Geschichten). Noch Konzept, nicht bestätigt und nicht erprobt."]
   ]
 };
